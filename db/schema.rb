@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_27_172905) do
+ActiveRecord::Schema.define(version: 2020_11_27_192142) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,24 @@ ActiveRecord::Schema.define(version: 2020_11_27_172905) do
     t.text "text_one", null: false
     t.string "url", null: false
     t.text "text_two"
+    t.text "text_three"
+    t.text "text_four"
+    t.text "text_five"
+    t.text "text_six"
+  end
+
+  create_table "socials", force: :cascade do |t|
+    t.string "twitter", null: false
+    t.string "tumblr", null: false
+    t.string "tiktok", null: false
+    t.string "instagram", null: false
+    t.string "facebook", null: false
+    t.string "youtube", null: false
+    t.string "reddit", null: false
+  end
+
+  create_table "steps", force: :cascade do |t|
+    t.text "text", null: false
   end
 
 end
