@@ -24,6 +24,8 @@ default: &default
 development:
   <<: *default
   database: halt_the_silence_development
+  username: postgres
+  password: basketball
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,6 +60,8 @@ development:
 test:
   <<: *default
   database: halt_the_silence_test
+  username: postgres
+  password: basketball
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -81,5 +85,5 @@ test:
 production:
   <<: *default
   database: halt_the_silence_production
-  username: halt_the_silence
-  password: <%= ENV['HALT_THE_SILENCE_DATABASE_PASSWORD'] %>
+  username: postgres
+  password: basketball

@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Profile.create(
+  text_one: Faker::Hipster.paragraphs(number: 3),
+  text_two: Faker::Hipster.paragraphs(number: 2),
+  url: 'https://youtu.be/aXI_hdCddNQ'
+)
