@@ -11,7 +11,7 @@ body {
 }
 
 .front-page {
-  text-align: center;
+  text-align: left;
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
 }
@@ -34,7 +34,7 @@ body {
 }
 
 a:link {
-  color: #AFB0B2;
+  color: #E57E22;
   background-color: transparent;
   text-decoration: none;
 }
@@ -52,7 +52,7 @@ a:hover {
 }
 
 a:active {
-  color: #AFB0B2;
+  color: #E57E22;
   background-color: transparent;
   text-decoration: underline;
 }
@@ -60,5 +60,14 @@ a:active {
 footer {
   border-top: 2px solid #292929;
   padding-top: 5px;
+  text-align: center;
+}
+
+iframe {
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.newsletter {
   text-align: center;
 }
