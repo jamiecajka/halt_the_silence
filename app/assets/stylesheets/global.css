@@ -13,7 +13,7 @@ body {
 .front-page {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .text_block {
@@ -55,4 +55,10 @@ a:active {
   color: #AFB0B2;
   background-color: transparent;
   text-decoration: underline;
+}
+
+footer {
+  border-top: 2px solid #292929;
+  padding-top: 5px;
+  text-align: center;
 }

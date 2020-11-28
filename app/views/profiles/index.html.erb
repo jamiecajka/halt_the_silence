@@ -3,7 +3,13 @@
     <% @profiles.each do |f| %>
         <h4><%= f.text_one %></h4>
         <h4><%= f.text_two %></h4>
-        <iframe class="embed-responsive-item" src="https://youtu.be/aXI_hdCddNQ" frameborder="0" allowfullscreen=""></iframe>
+        <button onclick="myFunction()">English/Spanish</button>
+        <div style="display: block;" id="english">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/SzWextLjK9k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div style="display: none;" id="spanish">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/ond-dL6ToVY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
         <h4><%= f.text_three %><a href="https://luxshine.tumblr.com/post/635890005693333504/y-yo-a-ti-cas-segunda-parte-because-of-course"> (Read more here)</a></h4>
         <h4><%= f.text_four %></h4>
         <h4><%= f.text_five %></h4>
@@ -19,3 +25,17 @@
     </ul>
   </div>
 </div>
+
+<script type="text/javascript">
+  function myFunction() {
+    var e = document.getElementById("english");
+    var s = document.getElementById("spanish");
+    if (e.style.display === "block" && s.style.display === "none") {
+      e.style.display = "none";
+      s.style.display = "block"
+    } else {
+      s.style.display = "none";
+      e.style.display = "block"
+    }
+  }
+</script>
