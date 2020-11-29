@@ -1,5 +1,5 @@
 class PoliciesController < ApplicationController
   def index
-    @socials = Social.all
+    @policies = Policy.all
   end
 end
