@@ -1,36 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Open+Sans&display=swap');
 
 .header-picture{
-  width: auto;
+  width: 1000px;
   height: 250px;
+  margin-left: 15%;
+  background-color: #ACACAC;
+}
+
+.blue {
+  background: linear-gradient(to bottom, #3c526d 75%, #d10568 100%);
+  text-align: center;
+  height: 40px;
+  padding-top: 15px;
+}
+
+.purple {
+  margin: auto;
+  padding: 10px;
+  background: linear-gradient(to top, #572561 75%, #d10568 100%);
+  text-align: center;
+  height: 40px;
 }
 
 body {
   background-color: #F7F7F7;
-  color: #AFB0B2;
+  color: #363A3E;
 }
 
 .front-page {
-  text-align: left;
+  text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
-}
-
-.text_block {
-  margin: 10px;
-  padding: 10px;
-}
-
-.to_do_list {
-  text-align: left;
-  padding-left: 50px;
-}
-
-.to_do_header {
-  font-family: 'Josefin Sans', sans-serif;
-  color: #7389DA;
-  font-size: 50px;
-  text-align: center;
 }
 
 a:link {
@@ -64,30 +64,44 @@ a:active {
     width: 100%;
     border-top: 2px solid #AFB0B2;
     text-align: center;
-    padding-top: 5px;
+    padding-top: 15px;
     padding-bottom: 5px;
 }
 
 iframe {
-  margin-left: 25%;
+  margin-left: 24%;
   margin-right: 25%;
 }
 
-.newsletter {
-  text-align: center;
-}
-
-.language {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .lang_button {
-  background-color: #363A3E;
+  background-color: #572561;
   color: #AFB0B2;
+  text-decoration: none;
   padding: 15px 32px;
   text-align: center;
-  text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
+  border: none;
+}
+
+.text_block {
+  width: 560px;
+  text-align: left;
+  margin-left: 28%;
+  margin-right: 25%;
+}
+
+.text_block h2 {
+  text-align: center;``
+}
+
+.text_block_one {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #DCDFE5;
+  padding: 20px;
+  height: auto;
+}
+
+.picture {
+  width: 560px;
 }
