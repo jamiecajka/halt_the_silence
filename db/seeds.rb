@@ -5,3 +5,102 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Statement.create(
+  body: "Picture this. You’re queer. And you’re desperate. Desperate to see yourself in media, portrayed in a way that is positive and inspiring. But you’re let down once again, by the show you were passionate about. An angel came out as queer and in love. In Spanish and only in Spanish, the human said he loved him back. But one is then erased from the narrative. The other is killed, violently.",
+  language: 'english',
+  ordinal: 1
+)
+
+Statement.create(
+  body: "There’s a reason the end of Supernatural has left an impact on you. There’s a reason it has made you think of every queer character you know in media that has died just for being who and what they are. There’s a reason it hurts.",
+  language: 'english',
+  ordinal: 1
+)
+
+Statement.create(
+  body: "It’s because, again and again, it means your story is being censored. You are being erased.",
+  language: 'english',
+  ordinal: 1
+)
+
+Statement.create(
+  body: "But we say halt. Let’s halt this silence once and for all.",
+  language: 'english',
+  ordinal: 1
+)
+
+
+Statement.create(
+  body: "That’s what HaltTheSilence is. We are queer fans just like you, tired of being silenced too. We are tired of letting others get to say how we think and feel, or tell us what stories we have are good enough. We say no.",
+  language: 'english',
+  ordinal: 1
+)
+
+Statement.create(
+  body: "And we’ll explain why. Through facts. Through reasoning. By promoting discussion and discourse in a way that makes storytellers, writers and networks alike, finally listen. We say halt. And we want you to say it too.",
+  language: 'english',
+  ordinal: 1
+)
+
+Statement.create(
+  body: "We’re not a campaign to end a network. We want to be a movement. We want fans’ voices to get taken seriously. We want our stories to stop being erased. And we want you to join us.",
+  language: 'english',
+  ordinal: 1
+)
+
+Statement.create(
+  body: "If you’re interested, join us. Sign up for our newsletter. Follow us on social media. And tell us how you’re going to say halt. Let’s do this, together.",
+  language: 'english',
+  ordinal: 1
+)
+
+Statement.create(
+  body: "Halt the Silence is a movement with one goal: To stop our voices from being silenced and erased in all forms of media. To do so, we have to critique — in an educational and productive way — how queer stories are presented.",
+  language: 'english',
+  ordinal: 2
+)
+
+  Statement.create(
+  header: "Mission Statement",
+  body: "HaltTheSilence is committed to the following:",
+  language: 'english',
+  ordinal: 2
+)
+
+Statement.create(
+  body: "1. Providing a safe place for fans to discuss queer issues in a way that is healthy, productive and smart.",
+  language: 'english',
+  ordinal: 2
+)
+
+Statement.create(
+  body: "2. Creating and promoting activists and campaigns that discuss queer issues in media.",
+  language: 'english',
+  ordinal: 2
+)
+
+Statement.create(
+  body: "3. Opening up channels to discuss queer issues with actors, directors, producers, etc., in all forms of media.",
+  language: 'english',
+  ordinal: 2
+)
+
+Statement.create(
+  body: "4. Promoting the works of creators and other media organizations that are getting it right, and telling the stories we want to see more of.",
+  language: 'english',
+  ordinal: 2
+)
+
+Statement.create(
+  body: "5. Maintaining integrity and transparency — we are fans just like you, and we never want to lose sight of that.",
+  language: 'english',
+  ordinal: 2
+)
+
+Statement.create(
+  header: "Disclaimer?",
+  body: "Halt the Silence started as part of a campaign to target networks erasing queer stories, but quickly grew beyond the original vision. Once that happened, we separated from the original group and decided to forge our path. Any and all material on this website was created by our team or is being used with express permission by the original creators. If you have any questions regarding the transition, please email us at info@haltthesilence.com.",
+  language: 'english',
+  ordinal: 2
+)

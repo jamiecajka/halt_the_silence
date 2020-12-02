@@ -1,20 +1,103 @@
-<div class="front-page">
-  <div class="text_block">
-        <div style="display: block;" id="english">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/SzWextLjK9k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-  </div>
-  <h4>More info coming soon</h4>
+<div class="purple">
+    <button onclick="englishFunction()" class="lang_button">View Page in English</button>
+    <button onclick="spanishFunction()" class="lang_button">Ver página en español</button>
 </div>
 
+<div class="front-page">
+  <div style="display: block;" id="english">
+    <div class="text_block_one">
+      <div class="text_block">
+        <% @statements.each do |s| %>
+          <% if s.language == 'english' && s.ordinal == 1 %>
+            <%= s.body %>
+            <br>
+            <br>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="video">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/SzWextLjK9k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="text_block_one">
+      <div class="text_block">
+        <% @statements.each do |t| %>
+          <% if t.language == 'english' && t.ordinal == 2 %>
+            <h2><%= t.header %></h2>
+            <%= t.body %>
+            <br>
+            <br>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: none;" id="spanish">
+    <div class="text_block_one">
+      <div class="text_block">
+        <% @statements.each do |s| %>
+          <% if s.language == 'spanish' && s.ordinal == 1 %>
+            <%= s.body %>
+            <br>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="video">
+      <<iframe width="560" height="315" src="https://www.youtube.com/embed/ond-dL6ToVY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="text_block_one">
+      <div class="text_block">
+        <% @statements.each do |t| %>
+          <% if t.language == 'spanish' && t.ordinal == 2 %>
+            <%= t.body %>
+            <br>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <%= image_tag 'bidean.png', {class: 'picture'} %>
+</div>
+<br><br>
+
+<!-- Begin Mailchimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+    #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+    /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://haltthesilence.us7.list-manage.com/subscribe/post?u=223b2a049ae441e250297838f&amp;id=5f5186f213" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+    <label for="mce-EMAIL">Subscribe to our newsletter and stay up to date!</label>
+    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_223b2a049ae441e250297838f_5f5186f213" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+
+<!--End mc_embed_signup-->
+
+
+
 <script type="text/javascript">
-  function myFunction() {
+  function spanishFunction() {
     var e = document.getElementById("english");
     var s = document.getElementById("spanish");
     if (e.style.display === "block" && s.style.display === "none") {
       e.style.display = "none";
       s.style.display = "block"
-    } else {
+    }
+  }
+  function englishFunction() {
+    var e = document.getElementById("english");
+    var s = document.getElementById("spanish");
+    if (s.style.display === "block" && e.style.display === "none") {
       s.style.display = "none";
       e.style.display = "block"
     }
