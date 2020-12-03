@@ -99,8 +99,8 @@ Statement.create(
 )
 
 Statement.create(
-  header: "Disclaimer?",
-  body: "Halt the Silence started as part of a campaign to target networks erasing queer stories, but quickly grew beyond the original vision. Once that happened, we separated from the original group and decided to forge our path. Any and all material on this website was created by our team or is being used with express permission by the original creators. If you have any questions regarding the transition, please email us at info@haltthesilence.com.",
+  header: "Disclaimer",
+  body: "Halt the Silence started as part of a campaign to target networks erasing queer stories, but quickly grew beyond the original vision. Once that happened, we separated from the original group and decided to forge our path. Any and all material on this website was created by our team or is being used with express permission by the original creators. If you have any questions regarding the transition, please email us at @haltthesilence@gmail.com.",
   language: 'english',
   ordinal: 2
 )
