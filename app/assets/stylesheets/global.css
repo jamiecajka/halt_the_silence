@@ -1,5 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Open+Sans&display=swap');
 
+body {
+  background-color: #F7F7F7;
+  color: #363A3E;
+}
+
+/* Multi-Page */
+
+.page {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+
+.lang_button {
+  background-color: #363A3E;
+  color: #DCDFE5;
+  text-decoration: none;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 14px;
+  border: none;
+}
+
+.text_block {
+  width: 560px;
+  text-align: left;
+  margin-left: 28%;
+  margin-right: 25%;
+}
+
+.text_block h2 {
+  text-align: center;
+}
+
+.text_block_one {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #DCDFE5;
+  padding-top: 20px;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+/* Home Page */
+
+iframe {
+  margin-left: 24%;
+  margin-right: 25%;
+}
+
+/* Footer */
+
+.credit {
+  font-size: 10px;
+}
+
+/* Header */
+
 .header-picture{
   height: 250px;
   margin-left: 20%;
@@ -19,17 +77,49 @@
   background: linear-gradient(to top, #572561 75%, #d10568 100%);
   text-align: center;
   height: 40px;
+  overflow: hidden;
 }
 
-body {
-  background-color: #F7F7F7;
-  color: #363A3E;
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: #363A3E;
+  position: relative;
 }
 
-.front-page {
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 20px;
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: #DCDFE5;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: #572561;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 1em;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: none;
+  color: white;
 }
 
 a:link {
@@ -54,53 +144,4 @@ a:active {
   color: #AFB0B2;
   background-color: transparent;
   text-decoration: underline;
-}
-
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    border-top: 2px solid #AFB0B2;
-    text-align: center;
-    padding-top: 15px;
-    padding-bottom: 5px;
-}
-
-iframe {
-  margin-left: 24%;
-  margin-right: 25%;
-}
-
-.lang_button {
-  background-color: #572561;
-  color: #AFB0B2;
-  text-decoration: none;
-  padding: 15px 32px;
-  text-align: center;
-  font-size: 14px;
-  border: none;
-}
-
-.text_block {
-  width: 560px;
-  text-align: left;
-  margin-left: 28%;
-  margin-right: 25%;
-}
-
-.text_block h2 {
-  text-align: center;
-}
-
-.text_block_one {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background-color: #DCDFE5;
-  padding: 20px;
-  height: auto;
-}
-
-.picture {
-  width: 560px;
 }

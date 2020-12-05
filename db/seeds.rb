@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -7,100 +9,99 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Statement.create(
-  body: "Picture this. You’re queer. And you’re desperate. Desperate to see yourself in media, portrayed in a way that is positive and inspiring. But you’re let down once again, by the show you were passionate about. An angel came out as queer and in love. In Spanish and only in Spanish, the human said he loved him back. But one is then erased from the narrative. The other is killed, violently.",
-  language: 'english',
+  body: 'Imagina esto. Eres queer. Y estás desesperado. Desesperado por verte en los medios de comunicación, representado de forma inspiradora y positiva. Y esta vez es tu serie favorita la que te decepciona. Uno de los protagonistas sale del armario y confiesa sus sentimientos por otro de los personajes principales. Y este le corresponde, pero sólo en el doblaje en español. Inmediatamente después, uno es completamente eliminado de la narrativa. El otro es asesinado violentamente.',
+  language: 'spanish',
   ordinal: 1
 )
 
 Statement.create(
-  body: "There’s a reason the end of Supernatural has left an impact on you. There’s a reason it has made you think of every queer character you know in media that has died just for being who and what they are. There’s a reason it hurts.",
-  language: 'english',
+  body: 'Hay un motivo por el que el final de Supernatural te ha dejado mal sabor de boca. Hay una razón por la cual te ha hecho pensar en cada personaje queer que conoces de series y películas que ha muerto simplemente por ser lo que son. Hay un motivo por el que te duele.',
+  language: 'spanish',
   ordinal: 1
 )
 
 Statement.create(
-  body: "It’s because, again and again, it means your story is being censored. You are being erased.",
-  language: 'english',
+  body: 'Y es porque, una y otra vez, significa que tu historia está siendo censurada. Te están haciendo desaparecer.',
+  language: 'spanish',
   ordinal: 1
 )
 
 Statement.create(
-  body: "But we say halt. Let’s halt this silence once and for all.",
-  language: 'english',
-  ordinal: 1
-)
-
-
-Statement.create(
-  body: "That’s what HaltTheSilence is. We are queer fans just like you, tired of being silenced too. We are tired of letting others get to say how we think and feel, or tell us what stories we have are good enough. We say no.",
-  language: 'english',
+  body: 'Pero nosotros decimos basta. Paremos este silencio de una vez por todas.',
+  language: 'spanish',
   ordinal: 1
 )
 
 Statement.create(
-  body: "And we’ll explain why. Through facts. Through reasoning. By promoting discussion and discourse in a way that makes storytellers, writers and networks alike, finally listen. We say halt. And we want you to say it too.",
-  language: 'english',
+  body: 'Eso es lo que HaltTheSilence es. Somos fans queer, justo como tú, cansados de que nos silencien. Cansades de dejar que sean otros los que dicten cómo pensamos y nos sentimos, o de que nos digan que las historias que tenemos ya son lo suficientemente buenas. Decimos no.',
+  language: 'spanish',
   ordinal: 1
 )
 
 Statement.create(
-  body: "We’re not a campaign to end a network. We want to be a movement. We want fans’ voices to get taken seriously. We want our stories to stop being erased. And we want you to join us.",
-  language: 'english',
+  body: 'Y vamos a explicar por qué. Mediante hechos. Mediante razonamientos. Promoviendo debate y diálogo que muevan a creadores, escritores y cadenas a escucharnos por fin. Decimos basta. Y queremos que tú lo digas también.',
+  language: 'spanish',
   ordinal: 1
 )
 
 Statement.create(
-  body: "If you’re interested, join us. Sign up for our newsletter. Follow us on social media. And tell us how you’re going to say halt. Let’s do this, together.",
-  language: 'english',
+  body: 'Nuestra campaña no quiere terminar con una cadena. Queremos ser un movimiento. Queremos que las voces de les fans sean tomadas en serio. Queremos que nuestras historias dejen de ser silenciadas. Y queremos que te unas a nosotros.',
+  language: 'spanish',
   ordinal: 1
 )
 
 Statement.create(
-  body: "Halt the Silence is a movement with one goal: To stop our voices from being silenced and erased in all forms of media. To do so, we have to critique — in an educational and productive way — how queer stories are presented.",
-  language: 'english',
-  ordinal: 2
+  body: 'Si estás interesado, únete. Apúntate a nuestra newsletter. Síguenos en redes sociales. Y cuéntanos las formas en las que vas a decir basta. Juntes podemos conseguirlo.',
+  language: 'spanish',
+  ordinal: 1
 )
 
-  Statement.create(
-  header: "Mission Statement",
-  body: "HaltTheSilence is committed to the following:",
-  language: 'english',
+Statement.create(
+  body: 'Halt the Silence es un movimiento con el siguiente objetivo: evitar que nuestras voces sean silenciadas y borradas en los medios de comunicación. Para ello, tenemos que ser críticos  — de forma educativa y productiva — con la manera en la que las historias queer son representadas.',
+  language: 'spanish',
   ordinal: 2
 )
 
 Statement.create(
-  body: "1. Providing a safe place for fans to discuss queer issues in a way that is healthy, productive and smart.",
-  language: 'english',
+  header: 'Declaración de intenciones',
+  body: 'HaltTheSilence se compromete a lo siguiente:',
+  language: 'spanish',
   ordinal: 2
 )
 
 Statement.create(
-  body: "2. Creating and promoting activists and campaigns that discuss queer issues in media.",
-  language: 'english',
+  body: '1. Proveer un espacio seguro para que los fans puedan discutir temas queer de forma sana, productiva e inteligente.',
+  language: 'spanish',
   ordinal: 2
 )
 
 Statement.create(
-  body: "3. Opening up channels to discuss queer issues with actors, directors, producers, etc., in all forms of media.",
-  language: 'english',
+  body: '2. Crear y promover activistas y campañas que debatan temas queer en los medios de comunicación.',
+  language: 'spanish',
   ordinal: 2
 )
 
 Statement.create(
-  body: "4. Promoting the works of creators and other media organizations that are getting it right, and telling the stories we want to see more of.",
-  language: 'english',
+  body: '3. Abrir canales de discusión de temas queer con actores, directores, productores, etc., en todo tipo de medios.',
+  language: 'spanish',
   ordinal: 2
 )
 
 Statement.create(
-  body: "5. Maintaining integrity and transparency — we are fans just like you, and we never want to lose sight of that.",
-  language: 'english',
+  body: '4. Promover el trabajo de creadores y otras organizaciones que lo están captando bien, y contando esas historias de las que necesitamos ver más.',
+  language: 'spanish',
   ordinal: 2
 )
 
 Statement.create(
-  header: "Disclaimer",
-  body: "Halt the Silence started as part of a campaign to target networks erasing queer stories, but quickly grew beyond the original vision. Once that happened, we separated from the original group and decided to forge our path. Any and all material on this website was created by our team or is being used with express permission by the original creators. If you have any questions regarding the transition, please email us at @haltthesilence@gmail.com.",
-  language: 'english',
+  body: '5. Mantener transparencia e integridad — somos fans justo como tú, y nunca queremos perder eso de vista',
+  language: 'spanish',
+  ordinal: 2
+)
+
+Statement.create(
+  header: 'Disclaimer',
+  body: 'Halt the Silence empezó como parte de una campaña con el objetivo de llamar la atención de cadenas que eliminan historias queer, pero pronto creció más allá de la visión original, y nos separamos del grupo original para forjar nuestro propio camino. Todos los materiales en esta página web y nuestras redes sociales han sido creados por nuestro equipo, o están siendo utilizados con el permiso expreso de sus creadores originales. Si tienes preguntas o dudas sobre la transición, mándanos un email a info@haltthesilence.com.',
+  language: 'spanish',
   ordinal: 2
 )

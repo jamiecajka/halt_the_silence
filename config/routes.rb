@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  resources :statements, only: [:index, :show]
+  resources :statements, only: %i[index show]
   resources :policies, only: [:index]
   resources :articles
 

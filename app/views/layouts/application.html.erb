@@ -20,9 +20,38 @@
         <a href="https://www.instagram.com/haltthesilence/" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://www.youtube.com/channel/UCXhihcdsLpu_JcqYLAQ9MUA" target="_blank"><i class="fab fa-youtube"></i></a>
       </div>
+<!-- Top Navigation Menu -->
+      <div class="topnav">
+        <a href="#home" class="purple"></a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+          <%= link_to "Home", statements_path %>
+          <%= link_to "About Us", statement_path(1) %>
+          <%= link_to "Privacy Policy", policies_path %>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
     </header>
     <%= yield %>
-    <img src="https://img.icons8.com/color/48/000000/lgbt-flag.png"/>
-    <a href="https://icons8.com/icon/32414/lgbt-flag">LGBT Flag icon by Icons8</a>
   </body>
+  <footer>
+    <%= link_to statements_path do %>
+      <img src="https://img.icons8.com/color/48/000000/lgbt-flag.png" class="icon"/>
+    <% end %>
+    <a href="https://icons8.com/icon/32414/lgbt-flag" class="credit">LGBT Flag icon by Icons8</a>
+  </footer>
 </html>
+
+<script type="text/javascript">
+  function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>

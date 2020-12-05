@@ -1,5 +1,8 @@
 # README
 
+[![Ruby Style Guide](https://img.shields.io/badge/code_style-rubocop-brightgreen.svg)](https://github.com/rubocop-hq/rubocop)
+[![Ruby Style Guide](https://img.shields.io/badge/code_style-community-brightgreen.svg)](https://rubystyle.guide)
+
 #HaltTheSilence
 This app was created as part of campaign to bring attention to the lack of LQBTQ representation in entertainment, specifically television. This page was started with only a landing page, but with plans to expand. The live webpage is located at www.haltthesilence.com.
 Future plans include:

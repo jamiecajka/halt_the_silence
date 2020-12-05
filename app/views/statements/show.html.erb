@@ -1,0 +1,52 @@
+<br>
+<div class="page">
+  <button onclick="englishFunction()" class="lang_button">View Page in English</button>
+  <button onclick="spanishFunction()" class="lang_button">Ver Página en Español</button>
+  <div style="display: block;" id="english">
+    <div class="text_block_one">
+      <div class="text_block">
+        <% @statement.each do |t| %>
+          <% if t.language == 'english' && t.ordinal == 2 %>
+            <h2><%= t.header %></h2>
+            <%= t.body %>
+            <br>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div style="display: none;" id="spanish">
+    <div class="text_block_one">
+      <div class="text_block">
+        <% @statement.each do |t| %>
+          <% if t.language == 'spanish' && t.ordinal == 2 %>
+            <h2><%= t.header %></h2>
+            <%= t.body %>
+            <br>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+
+<script type="text/javascript">
+  function spanishFunction() {
+    var e = document.getElementById("english");
+    var s = document.getElementById("spanish");
+    if (e.style.display === "block" && s.style.display === "none") {
+      e.style.display = "none";
+      s.style.display = "block"
+    }
+  }
+  function englishFunction() {
+    var e = document.getElementById("english");
+    var s = document.getElementById("spanish");
+    if (s.style.display === "block" && e.style.display === "none") {
+      s.style.display = "none";
+      e.style.display = "block"
+    }
+  }
+</script>
