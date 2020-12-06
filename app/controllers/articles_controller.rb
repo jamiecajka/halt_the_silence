@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 class ArticlesController < ApplicationController
-  before_action :authenticate_user!, except: [:show, :index
-  ]
+  before_action :authenticate_user!, except: %i[show index]
   def index
     @articles = Article.all
   end

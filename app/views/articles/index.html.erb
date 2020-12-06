@@ -1,0 +1,9 @@
+<br>
+<div class="page">
+  <% @articles.each do |a| %>
+    <img class="article_picture" <%= image_tag (a.picture.url) %>
+    <div class="text_block_one">
+      <%= link_to a.title, article_path(a.id) %>
+    </div>
+  <% end %>
+</div>
