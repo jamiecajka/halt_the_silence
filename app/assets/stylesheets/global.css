@@ -50,10 +50,32 @@ iframe {
   margin-right: 25%;
 }
 
+/* User Home */
+
+.options {
+  text-align: center;
+  font-size: 40px;
+}
+
+.options li {
+  list-style-type: none;
+}
+
+.options a:link {
+  color: #363A3E;
+}
+
 /* Footer */
 
 .credit {
   font-size: 10px;
+}
+
+/* Article Pages */
+
+.article_picture {
+  height: 300px;
+  width: 200px;
 }
 
 /* Header */
@@ -144,4 +166,30 @@ a:active {
   color: #AFB0B2;
   background-color: transparent;
   text-decoration: underline;
+}
+
+/* New and Edit Pages */
+
+.form_header {
+  font-size: 40px;
+}
+
+.text_field {
+  font-size: 15px;
+  height: 25px;
+}
+
+.form-actions {
+  padding-left: 25px;
+  color: inherit;
+}
+
+.text_area {
+  font-size: 15px;
+  height: 300px;
+  width: 500px;
+}
+
+.row {
+  margin-bottom: 10px;
 }

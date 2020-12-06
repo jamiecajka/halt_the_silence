@@ -1,0 +1,29 @@
+<% if current_user.admin? %>
+  <div class='page'>
+    <h1 class="form_header">Add a new Article</h1>
+    <%= form_for @article do |a| %>
+      <div class="row">
+        <%= a.label :picture, 'Picture', class: 'form-actions' %>
+        <%= a.file_field :picture, class: 'text_field' %>
+      </div>
+      <div class="row">
+        <%= a.label :title, 'Title', class: 'form-actions' %>
+        <%= a.text_field :title, class: 'text_field' %>
+      </div>
+      <div class="row">
+        <%= a.label :author, 'Author', class: 'form-actions' %>
+        <%= a.text_field :author, class: 'text_field' %>
+      </div><div class="row">
+        <%= a.label :url, 'URL', class: 'form-actions' %>
+        <%= a.text_field :url, class: 'text_field' %>
+      </div>
+      <div class="row">
+        <%= a.label :body, 'Body', class: 'form-actions' %>
+        <%= a.text_area :body, class: 'text_area' %>
+      </div>
+      <div class="form-actions">
+        <%= a.button 'Submit' %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

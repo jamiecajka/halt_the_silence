@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -9,6 +11,6 @@ class User < ApplicationRecord
   validates :name, presence: true
 
   def admin?
-    role == "admin"
+    role == 'admin'
   end
 end
