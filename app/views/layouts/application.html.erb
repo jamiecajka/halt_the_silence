@@ -38,9 +38,15 @@
     <%= yield %>
   </body>
   <footer>
-    <%= link_to statements_path do %>
-      <img src="https://img.icons8.com/color/48/000000/lgbt-flag.png" class="icon"/>
-    <% end %>
+    <% if user_signed_in? %>
+      <%= link_to destroy_user_session_path, {method: :delete} do %>
+        <img src="https://img.icons8.com/color/48/000000/lgbt-flag.png" class="icon"/>
+      <% end %>
+    <% else %>
+      <%= link_to new_user_session_path do %>
+        <img src="https://img.icons8.com/color/48/000000/lgbt-flag.png" class="icon"/>
+      <% end %>
+      <% end %>
     <a href="https://icons8.com/icon/32414/lgbt-flag" class="credit">LGBT Flag icon by Icons8</a>
   </footer>
 </html>

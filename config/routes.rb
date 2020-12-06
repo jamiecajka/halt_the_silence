@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :statements, only: %i[index show]
+  devise_for :users
+  resources :users
+  resources :statements, only: [:index, :show]
   resources :policies, only: [:index]
   resources :articles
 
