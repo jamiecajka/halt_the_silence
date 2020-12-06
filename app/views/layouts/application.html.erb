@@ -28,7 +28,7 @@
           <%= link_to "Home", statements_path %>
           <%= link_to "About Us", statement_path(1) %>
           <%= link_to "Privacy Policy", policies_path %>
-          <% if current_user.admin? %>
+          <% if user_signed_in? %>
             <%= link_to "User Home", user_path(current_user) %>
           <% end %>
         </div>
