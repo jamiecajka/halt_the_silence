@@ -1,0 +1,17 @@
+<% if current_user.admin? %>
+  <div class='page'>
+    <h1 class="form_header">Add Tags to the Article</h1>
+    <%= form_for @article_tag do |a| %>
+      <div class="row">
+        <%= a.label :article_id, 'Article *', class: 'form-actions' %>
+        <%= a.select :article_id, Article.all.collect { |b| [b.title, b.id] } %>
+      </div>
+      <div class="row">
+        <%= a.label :tag_id, 'Tags *', class: 'form-actions' %>
+        <%= a.select :tag_id, Tag.all.collect { |t| [t.tag, t.id] } %>
+      </div>
+    <% end %>
+    <%= link_to "Add A New Tag", new_tag_path %>
+    <%= link_to "Finish", articles_path %>
+  </div>
+<% end %>

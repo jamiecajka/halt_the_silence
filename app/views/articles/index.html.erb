@@ -3,7 +3,15 @@
   <% @articles.each do |a| %>
     <img class="article_picture" <%= image_tag (a.picture.url) %>
     <div class="text_block_one">
-      <%= link_to a.title, article_path(a.id) %>
+      <%= link_to a.title, article_path(a.id), {class: 'title'} %>
+      <h5>Tags:</h5>
+      <div>
+        <% @article_tags.each do |at| %>
+          <% if at.article_id == a.id %>
+            <%= at.tag.tag %>
+          <% end %>
+        <% end %>
+      </div>
     </div>
   <% end %>
 </div>

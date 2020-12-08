@@ -78,6 +78,12 @@ iframe {
   width: 200px;
 }
 
+.title {
+  font-size: 25px;
+  color: #363A3E;
+  text-decoration: none;
+}
+
 /* Header */
 
 .header-picture{
@@ -144,25 +150,25 @@ iframe {
   color: white;
 }
 
-a:link {
+.blue a:link {
   color: #AFB0B2;
   background-color: transparent;
   text-decoration: none;
 }
 
-a:visited {
+.blue a:visited {
   color: #AFB0B2;
   background-color: transparent;
   text-decoration: none;
 }
 
-a:hover {
+.blue a:hover {
   color: #42B681;
   background-color: transparent;
   text-decoration: underline;
 }
 
-a:active {
+.blue a:active {
   color: #AFB0B2;
   background-color: transparent;
   text-decoration: underline;
