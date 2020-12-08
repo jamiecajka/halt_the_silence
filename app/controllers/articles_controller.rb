@@ -1,13 +1,16 @@
 # frozen_string_literal: true
 
 class ArticlesController < ApplicationController
-  before_action :authorize_user, except: [:show, :index]
   def index
     @articles = Article.all
+    @tags = Tag.all
+    @article_tags = ArticleTag.all
   end
 
   def show
     @article = Article.find(params[:id])
+    @tags = Tag.all
+    @article_tags = ArticleTag.all
   end
 
   def new
@@ -18,7 +21,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     if @article.save
       flash[:notice] = 'New Article Added!'
-      redirect_to @article
+      redirect_to new_article_tag_path
     else
       flash[:alert] = 'New Article Not Created'
       render :new

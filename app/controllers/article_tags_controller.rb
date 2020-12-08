@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class ArticleTagsController < ApplicationController
-  before_action :authorize_user, except: [:show, :index]
   def index
     @article_tags = ArticleTag.all
   end
@@ -15,10 +14,10 @@ class ArticleTagsController < ApplicationController
   end
 
   def create
-    @article_tag = ArticleTag.new(article_params)
+    @article_tag = ArticleTag.new(article_tag_params)
     if @article_tag.save
       flash[:notice] = 'New ArticleTag Added!'
-      redirect_to @article_tag
+      redirect_to new_article_tag_path
     else
       flash[:alert] = 'New ArticleTag Not Created'
       render :new
@@ -33,7 +32,7 @@ class ArticleTagsController < ApplicationController
     @article_tag = ArticleTag.find(params[:id])
     if @article_tag.update_attributes(article_tag_params)
       flash[:notice] = 'ArticleTag Updated!'
-      redirect_to @article_tag
+      redirect_to articles_path
     else
       render 'edit'
     end
@@ -48,11 +47,4 @@ class ArticleTagsController < ApplicationController
     end
   end
 
-  private
-
-  def article_params
-    params.require(:article_tag).permit(
-      :tag
-    )
-  end
 end
