@@ -4,5 +4,5 @@ class Tag < ApplicationRecord
   has_many :article_tags
   has_many :articles, through: :article_tags
 
-  validates :tag, presence: true 
+  validates :tag, presence: true, uniqueness: true 
 end

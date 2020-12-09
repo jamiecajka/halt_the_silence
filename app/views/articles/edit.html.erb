@@ -1,4 +1,5 @@
 <% if current_user.admin? %>
+<%= link_to 'Back to Article', article_path(@article.id) %>
   <div class='page'>
     <% if @article.errors.any? %>
       <div>
@@ -31,6 +32,14 @@
       <div class="row">
         <%= a.label :body, 'Body', class: 'form-actions' %>
         <%= a.text_area :body, class: 'text_area' %>
+      </div><div>
+        <h3>Click on the tag you want to remove:</h3>
+        <% @article_tag.each do |at| %>
+          <% if at.article_id == @article.id %>
+            <p><%= link_to at.tag.tag, article_tag_path(at.id), data: { confirm: 'Are you sure you want to remove this tag: %{word}' % { word: at.tag.tag} }, method: :delete, :class => 'user_links' %> <br />
+          <% end %>
+        <% end %>
+        <%= link_to 'Add New Tag', new_article_tag_path %>
       </div>
       <div class="form-actions">
         <%= a.button 'Submit' %>

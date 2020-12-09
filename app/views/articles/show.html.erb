@@ -1,4 +1,5 @@
 <div class="page">
+  <%= link_to 'Back to Article Index', articles_path %>
   <h2><%= @article.title %></h2>
   <img class="article_picture" <%= image_tag (@article.picture.url) %>
   <h3><%= @article.author %></h3>
@@ -6,6 +7,13 @@
     <h3><%= @article.url %></h3>
   <% end %>
   <p><%= simple_format @article.body %></p>
+  <div>
+    <% @article_tags.each do |at| %>
+      <% if at.article_id == @article.id %>
+        <%= at.tag.tag %>
+      <% end %>
+    <% end %>
+  </div>
   <% if current_user.admin? %>
     <%= link_to edit_article_path do  %>
       <i class="far fa-edit fa-2x"></i>
