@@ -43,8 +43,17 @@ class ArticleTagsController < ApplicationController
 
     if @article_tag.destroy
       flash[:notice] = 'Article has been deleted.'
-      redirect_to new_article_tag_path
+      redirect_to edit_article_path(@article_tag.article_id)
     end
+  end
+
+  private
+
+  def article_tag_params
+    params.require(:article_tag).permit(
+      :tag_id,
+      :article_id
+    )
   end
 
 end

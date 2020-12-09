@@ -2,7 +2,7 @@
 
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.all
+    @articles = Article.all.order("created_at DESC")
     @tags = Tag.all
     @article_tags = ArticleTag.all
   end
@@ -30,6 +30,7 @@ class ArticlesController < ApplicationController
 
   def edit
     @article = Article.find(params[:id])
+    @article_tag = ArticleTag.all
   end
 
   def update
