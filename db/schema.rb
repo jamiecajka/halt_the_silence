@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_07_182804) do
+ActiveRecord::Schema.define(version: 2020_12_10_231041) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,20 @@ ActiveRecord::Schema.define(version: 2020_12_07_182804) do
   create_table "policies", force: :cascade do |t|
     t.string "header"
     t.text "body"
+  end
+
+  create_table "post_tags", force: :cascade do |t|
+    t.bigint "post_id", null: false
+    t.bigint "tag_id", null: false
+    t.index ["post_id"], name: "index_post_tags_on_post_id"
+    t.index ["tag_id"], name: "index_post_tags_on_tag_id"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "author", null: false
+    t.string "catagory", null: false
+    t.text "body", null: false
   end
 
   create_table "statements", force: :cascade do |t|

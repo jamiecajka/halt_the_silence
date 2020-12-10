@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :articles
   resources :tags, only: [:new, :create, :edit]
   resources :article_tags
+  resources :posts
+  resources :post_tags
 
   root 'statements#index'
 end
