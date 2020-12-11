@@ -1,0 +1,44 @@
+<% if current_user.admin? %>
+<%= link_to 'Back to Post', post_path(@post.id) %>
+  <div class='page'>
+    <% if @post.errors.any? %>
+      <div>
+        <h2><%= pluralize(@post.errors.count, "error") %> prohibited this info from being saved:</h2>
+        <ul>
+          <% @post.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <h1 class="form_header">Update post</h1>
+    <%= form_for @post do |p| %>
+      <div class="row">
+        <%= p.label :title, 'Title', class: 'form-actions' %>
+        <%= p.text_field :title, class: 'text_field' %>
+      </div>
+      <div class="row">
+        <%= p.label :author, 'Author', class: 'form-actions' %>
+        <%= p.text_field :author, class: 'text_field' %>
+        <%= p.label :catagory, 'Catagory', class: 'form-actions' %>
+        <%= p.select :catagory, options_for_select([['Normal', 'normal'], ['Guest', 'guest'], ['Other', 'other']]) %>
+      </div>
+      <div class="row">
+        <%= p.label :body, 'Body', class: 'form-actions' %>
+        <%= p.text_area :body, class: 'text_area' %>
+      </div>
+      <div>
+        <h3>Click on the Tag you want to remove:</h3>
+        <% @post_tags.each do |pt| %>
+          <% if pt.post_id == @post.id %>
+            <p><%= link_to pt.tag.tag, post_tag_path(pt.id), data: { confirm: 'Are you sure you want to remove this tag: %{word}' % { word: pt.tag.tag} }, method: :delete, :class => 'user_links' %> <br />
+          <% end %>
+        <% end %>
+        <%= link_to 'Add New Tag', new_post_tag_path %>
+      </div>
+      <div class="form-actions">
+        <%= p.button 'Submit' %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

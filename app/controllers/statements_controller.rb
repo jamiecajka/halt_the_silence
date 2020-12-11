@@ -2,8 +2,7 @@
 
 class StatementsController < ApplicationController
   after_action :allow_iframe, only: :embed
-  def embed
-  end
+  def embed; end
 
   def index
     @statements = Statement.all

@@ -3,14 +3,17 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.all
+    @post_tags = PostTag.all
   end
 
   def show
     @post = Post.find(params[:id])
+    @post_tags = PostTag.all
   end
 
   def new
     @post = Post.new
+    @post_tags = PostTag.all
   end
 
   def create
@@ -26,6 +29,7 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+    @post_tags = PostTag.all
   end
 
   def update
@@ -57,5 +61,4 @@ class PostsController < ApplicationController
       :body
     )
   end
-
 end

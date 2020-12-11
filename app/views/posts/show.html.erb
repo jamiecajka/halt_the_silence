@@ -1,0 +1,30 @@
+<div class="page">
+  <%= link_to 'Back to Blog Index', posts_path %>
+  <div class="blog_article">
+    <h2><%= @post.title %></h2>
+    <% case @post.catagory %>
+      <% when 'guest' %>
+        <h3 class="guest"> Guest Contributor <%= @post.author %> </h3>
+      <% when 'other' %>
+        <h3 class="other"> <%= @post.author %> </h3>
+      <% else %>
+        <h3 class="us"> <%= @post.author %> </h3>
+      <% end %>
+    <p><%= simple_format @post.body %></p>
+    <div>
+      <% @post_tags.each do |pt| %>
+        <% if pt.post_id == @post.id %>
+          <%= pt.tag.tag %>
+        <% end %>
+      <% end %>
+    </div>
+    <% if current_user.admin? %>
+      <%= link_to edit_post_path do  %>
+        <i class="far fa-edit fa-2x"></i>
+      <% end %>
+      <%= link_to post_path, data: { confirm: "Are you sure?" }, method: :delete do %>
+        <i class="far fa-trash-alt fa-2x"></i>
+      <% end %>
+    <% end %>
+  </div>
+</div>

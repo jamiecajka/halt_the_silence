@@ -2,7 +2,7 @@
 
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.all.order("created_at DESC")
+    @articles = Article.all.order('created_at DESC')
     @tags = Tag.all
     @article_tags = ArticleTag.all
   end
