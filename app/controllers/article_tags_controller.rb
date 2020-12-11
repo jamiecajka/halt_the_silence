@@ -55,5 +55,4 @@ class ArticleTagsController < ApplicationController
       :article_id
     )
   end
-
 end

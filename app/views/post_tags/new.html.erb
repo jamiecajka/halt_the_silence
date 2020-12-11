@@ -1,0 +1,20 @@
+<% if current_user.admin? %>
+  <div class='page'>
+    <h1 class="form_header">Add Tags to the Blog Post</h1>
+    <%= form_for @post_tag do |p| %>
+      <div class="row">
+        <%= p.label :post_id, 'Post *', class: 'form-actions' %>
+        <%= p.select :post_id, Post.all.collect { |b| [b.title, b.id] } %>
+      </div>
+      <div class="row">
+        <%= p.label :tag_id, 'Tags *', class: 'form-actions' %>
+        <%= p.select :tag_id, Tag.all.collect { |t| [t.tag, t.id] } %>
+      </div>
+      <div class="form-actions">
+        <%= a.button 'Submit' %>
+      </div>
+    <% end %>
+    <%= link_to "Add A New Tag", new_tag_path %>
+    <%= link_to "Finish", posts_path %>
+  </div>
+<% end %>

@@ -1,0 +1,25 @@
+<br>
+<div class="page">
+  <% @posts.each do |p| %>
+    <div class="text_block_one">
+      <%= link_to p.title, post_path(p.id), {class: 'title'} %>
+      <% case p.catagory %>
+        <% when 'guest' %>
+          <h3 class="guest"> Guest Contributor <%= p.author %> </h3>
+        <% when 'other' %>
+          <h3 class="other"> <%= p.author %> </h3>
+        <% else %>
+          <h3 class="us"> <%= p.author %> </h3>
+        <% end %>
+      <%= truncate(p.body, length: 100, escape: false) %>
+      <h5>Tags:</h5>
+      <div>
+        <% @post_tags.each do |pt| %>
+          <% if pt.post_id == p.id %>
+            <%= pt.tag.tag %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

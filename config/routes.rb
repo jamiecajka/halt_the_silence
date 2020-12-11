@@ -3,10 +3,10 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :users
-  resources :statements, only: [:index, :show]
+  resources :statements, only: %i[index show]
   resources :policies, only: [:index]
   resources :articles
-  resources :tags, only: [:new, :create, :edit]
+  resources :tags, only: %i[new create edit]
   resources :article_tags
   resources :posts
   resources :post_tags

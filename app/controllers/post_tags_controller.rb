@@ -55,5 +55,4 @@ class PostTagsController < ApplicationController
       :post_id
     )
   end
-
 end

@@ -1,8 +1,9 @@
 <br>
-<div class="page">
+<div class="article_page">
   <% @articles.each do |a| %>
-    <img class="article_picture" <%= image_tag (a.picture.url) %>
-    <div class="text_block_one">
+    <div class="text_block_two">
+      <img class="article_picture" <%= image_tag (a.picture.url) %>
+      <br>
       <%= link_to a.title, article_path(a.id), {class: 'title'} %>
       <h5>Tags:</h5>
       <div>

@@ -194,3 +194,59 @@ Statement.create(
   language: 'spanish',
   ordinal: 2
 )
+
+2.times do
+  Post.create(
+    title: Faker::Hacker.say_something_smart,
+    body: Faker::Hipster.paragraphs(number: 5, supplemental: true),
+    author: Faker::Ancient.primordial,
+    catagory: 'guest'
+  )
+end
+
+2.times do
+  Post.create(
+    title: Faker::Hacker.say_something_smart,
+    body: Faker::Hipster.paragraphs(number: 5, supplemental: true),
+    author: Faker::Ancient.primordial,
+    catagory: 'other'
+  )
+end
+
+6.times do
+  Post.create(
+    title: Faker::Hacker.say_something_smart,
+    body: Faker::Hipster.paragraphs(number: 5, supplemental: true),
+    author: Faker::Ancient.primordial,
+    catagory: 'normal'
+  )
+end
+
+40.times do
+  PostTag.create(
+    post_id: rand(1..10),
+    tag_id: rand(1..20)
+  )
+end
+
+20.times do
+  Tag.create(
+    tag: Faker::Verb.base
+  )
+end
+
+10.times do
+  Article.create(
+    title: Faker::Verb.base,
+    body: Faker::Hipster.paragraphs(number: 3),
+    author: Faker::GreekPhilosophers.name,
+    picture: '/app/assets/images/bidean.png'
+  )
+end
+
+40.times do
+  ArticleTag.create(
+    article_id: rand(1..10),
+    tag_id: rand(1..20)
+  )
+end
