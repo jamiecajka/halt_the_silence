@@ -36,7 +36,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     if @post.update_attributes(post_params)
       flash[:notice] = 'Post Updated!'
-      redirect_to articles_path
+      redirect_to posts_path
     else
       render 'edit'
     end
@@ -46,8 +46,8 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
 
     if @post.destroy
-      flash[:notice] = 'Article has been deleted.'
-      redirect_to edit_article_path(@post.article_id)
+      flash[:notice] = 'Post has been deleted.'
+      redirect_to edit_post_path(@post.post_id)
     end
   end
 
