@@ -32,7 +32,7 @@ class TagsController < ApplicationController
 
   private
 
-  def article_tag_params
+  def tag_params
     params.require(:article_tag).permit(
       :tag
     )
