@@ -58,7 +58,8 @@ class PostsController < ApplicationController
       :title,
       :author,
       :catagory,
-      :body
+      :body,
+      :picture
     )
   end
 end
