@@ -65,11 +65,11 @@ Rails.application.configure do
   config.action_mailer.preview_path = "#{Rails.root}/tmp/mailers/previews"
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: 'smtp.mailgun.org',
+    address: ENV["smtp_hostname"],
     port: 587,
-    domain: 'example.com',
-    user_name: '<postmaster@sandboxf5d7c3928fd6410a85b9bd9f441657c3.mailgun.org>',
-    password: '<13e596c7c076e599ab47faf10fa976bc-4879ff27-72dc844c>',
+    domain: ENV["smtp_hostname"],
+    user_name: ENV["mailgun_username"],
+    password: ENV["mailgun_password"],
     authentication: 'plain',
     enable_starttls_auto: true
     }
