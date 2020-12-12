@@ -29,4 +29,12 @@ class TagsController < ApplicationController
       render 'edit'
     end
   end
+
+  private
+
+  def article_tag_params
+    params.require(:article_tag).permit(
+      :tag
+    )
+  end
 end
