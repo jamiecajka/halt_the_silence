@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :article_tags
   resources :posts
   resources :post_tags
+  resources :messages, only: %i[new create]
 
   root 'statements#index'
 end
