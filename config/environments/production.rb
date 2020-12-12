@@ -65,19 +65,14 @@ Rails.application.configure do
   config.action_mailer.preview_path = "#{Rails.root}/tmp/mailers/previews"
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: ENV["smtp_hostname"],
+    address: "smtp.mailgun.org",
     port: 587,
-    domain: ENV["smtp_hostname"],
-    user_name: ENV["mailgun_username"],
-    password: ENV["mailgun_password"],
+    domain: ENV["MAILGUN_DOMAIN"],
+    user_name: ENV["MAILGUN_SMTP_LOGIN"],
+    password: ENV["MAILGUN_SMTP_PASSWORD"],
     authentication: 'plain',
     enable_starttls_auto: true
-    }
-    config.action_mailer.default_url_options = {
-    host: '',
-    port: 1025,
-    protocol: 'http'
-    }
+  }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
