@@ -1,0 +1,23 @@
+<% if current_user.admin? %>
+  <div class='page'>
+
+    <h1 class="form_header">New Message</h1>
+    <%= form_for @message do |p| %>
+      <div class="row">
+        <%= p.label :name, 'Name', class: 'form-actions' %>
+        <%= p.text_field :name, class: 'text_field' %>
+      </div>
+      <div class="row">
+        <%= p.label :email, 'Email', class: 'form-actions' %>
+        <%= p.text_field :email, class: 'text_field' %>
+      </div>
+      <div class="row">
+        <%= p.label :body, 'Body', class: 'form-actions' %>
+        <%= p.text_area :body, class: 'text_area' %>
+      </div>
+      <div class="form-actions">
+        <%= p.button 'Send' %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
