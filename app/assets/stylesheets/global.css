@@ -5,6 +5,10 @@ body {
   color: #363A3E;
 }
 
+
+.a_list {
+  list-style-type: none;
+}
 /* Multi-Page */
 
 .page {
