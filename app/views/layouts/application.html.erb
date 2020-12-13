@@ -27,6 +27,7 @@
         <div id="myLinks">
           <%= link_to "Home", statements_path %>
           <%= link_to "About Us", statement_path(1) %>
+          <%= link_to "Get Involved", new_message_path %>
           <%= link_to "Privacy Policy", policies_path %>
           <% if user_signed_in? %>
             <%= link_to "User Home", user_path(current_user) %>
