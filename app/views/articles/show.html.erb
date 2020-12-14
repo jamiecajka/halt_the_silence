@@ -15,12 +15,14 @@
         <% end %>
       <% end %>
     </div>
-    <% if current_user.admin? %>
-      <%= link_to edit_article_path do  %>
-        <i class="far fa-edit fa-2x"></i>
-      <% end %>
-      <%= link_to article_path, data: { confirm: "Are you sure?" }, method: :delete do %>
-        <i class="far fa-trash-alt fa-2x"></i>
+    <% if user_signed_in? %>
+      <% if current_user.admin? %>
+        <%= link_to edit_article_path do  %>
+          <i class="far fa-edit fa-2x"></i>
+        <% end %>
+        <%= link_to article_path, data: { confirm: "Are you sure?" }, method: :delete do %>
+          <i class="far fa-trash-alt fa-2x"></i>
+        <% end %>
       <% end %>
     <% end %>
   </div>
