@@ -2,24 +2,25 @@
   <%= link_to 'Back to Blog Index', posts_path %>
   <div class="blog_article">
     <h2><%= @post.title %></h2>
-    <%= @post.created_at.strftime("%B %d, %Y") %>
+    <p><%= @post.created_at.strftime("%B %d, %Y") %></p>
     <% case @post.catagory %>
       <% when 'guest' %>
         <h3 class="guest"> Guest Contributor <%= @post.author %> </h3>
       <% when 'other' %>
-        <h3 class="other"> <%= @post.author %> </h3>
+        <h3 class="other">By <%= @post.author %> </h3>
       <% else %>
-        <h3 class="us"> <%= @post.author %> </h3>
+        <h3 class="us">By <%= @post.author %> </h3>
     <% end %>
     <% if @post.catagory == 'picture' %>
-      <img class="article_picture" <%= image_tag (@post.picture.url) %>
+      <img class="blog_picture" <%= image_tag (@post.picture.url) %>
     <% else %>
       <p><%= simple_format @post.body %></p>
     <% end %>
     <div>
+      <h3>Tags:</h3>
       <% @post_tags.each do |pt| %>
         <% if pt.post_id == @post.id %>
-          <%= pt.tag.tag %>
+          <p><%= pt.tag.tag %></p>
         <% end %>
       <% end %>
     </div>

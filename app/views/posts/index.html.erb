@@ -19,14 +19,6 @@
         <% else %>
           <%= truncate(p.body, length: 100, escape: false) %>
         <% end %>
-      <h5>Tags:</h5>
-      <div>
-        <% @post_tags.each do |pt| %>
-          <% if pt.post_id == p.id %>
-            <%= pt.tag.tag %>
-          <% end %>
-        <% end %>
-      </div>
     </div>
   <% end %>
 </div>
