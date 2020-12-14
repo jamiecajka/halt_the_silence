@@ -80,6 +80,7 @@ iframe {
 .article_picture {
   height: 300px;
   width: 200px;
+  border: 1px solid black;
 }
 
 .title {
@@ -116,6 +117,11 @@ iframe {
 
 .us {
   color: #572561;
+}
+
+.blog_picture {
+  border: 1px solid black;
+  text-align: center;
 }
 
 /* Header */
