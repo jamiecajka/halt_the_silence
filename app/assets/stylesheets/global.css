@@ -122,6 +122,8 @@ iframe {
 .blog_picture {
   border: 1px solid black;
   text-align: center;
+  max-width: 800px;
+  max-height: 800px;
 }
 
 /* Header */

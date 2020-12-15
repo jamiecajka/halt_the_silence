@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   resources :policies, only: [:index]
   resources :articles
   resources :tags, only: %i[new create edit]
-  resources :article_tags, only: %i[new create edit]
+  resources :article_tags, except: %i[show index]
   resources :posts
-  resources :post_tags, only: %i[new create edit]
+  resources :post_tags, except: %i[show index]
   resources :messages, only: %i[new create]
 
   root 'statements#index'

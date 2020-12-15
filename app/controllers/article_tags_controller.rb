@@ -42,8 +42,8 @@ class ArticleTagsController < ApplicationController
     @article_tag = ArticleTag.find(params[:id])
 
     if @article_tag.destroy
-      flash[:notice] = 'Article has been deleted.'
-      redirect_to edit_article_path(@article_tag.article_id)
+      flash[:notice] = 'Tag has been deleted.'
+      redirect_to session[:return_to] = request.referer
     end
   end
 
