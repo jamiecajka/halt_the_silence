@@ -7,7 +7,7 @@
       <div class="text_block">
         <% @statement.each do |t| %>
           <% if t.language == 'english' && t.ordinal == 2 %>
-            <h2><%= t.header %></h2>
+            <h2 class="head_text"><%= t.header %></h2>
             <%= t.body %>
             <br>
           <% end %>

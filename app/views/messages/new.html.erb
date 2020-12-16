@@ -1,7 +1,7 @@
 <div class="page">
   <div class="text_block_one">
     <div class="text_block">
-      <h2>#HaltTheSilence By Joining Us!</h2>
+      <h2 class="head_text">#HaltTheSilence By Joining Us!</h2>
 
       <h4>We have one goal at #HaltTheSilence: To change how media discusses and portrays LGBTQ+ characters and themes. And we need help — your help! </h4>
 
@@ -15,7 +15,7 @@
   </div>
   <div class="text_block_one">
     <div class="text_block">
-      <h2>Join Our Team</h2>
+      <h2 class="head_text">Join Our Team</h2>
       <h4>We’re also looking for help in the following roles:</h4>
       <ul class="a_list">
         <li>Writer</li>
@@ -30,28 +30,22 @@
   </div>
   <h3>Disclaimer: </h3>
   <h5>#HaltTheSilence was created by fans, for fans. At this time, we cannot offer monetary compensation for your work, only our eternal gratitude. Thank you.</h5>
-</div>
-<% if user_signed_in? %>
-<% if current_user.admin? %>
-  <div class='page'>
-    <h2 class="form_header">New Message</h2>
-    <%= form_for @message do |p| %>
-      <div class="row">
-        <%= p.label :name, 'Name', class: 'form-actions' %>
-        <%= p.text_field :name, class: 'text_field' %>
-      </div>
-      <div class="row">
-        <%= p.label :email, 'Email', class: 'form-actions' %>
-        <%= p.text_field :email, class: 'text_field' %>
-      </div>
-      <div class="row">
-        <%= p.label :body, 'Body', class: 'form-actions' %>
-        <%= p.text_area :body, class: 'text_area' %>
-      </div>
-      <div class="form-actions">
-        <%= p.button 'Send' %>
-      </div>
-    <% end %>
+  <h2 class="form_header">Send Us A Message!</h2>
+  <%= form_for @message do |p| %>
+    <div class="row">
+      <%= p.label :name, 'Name', class: 'form-actions' %>
+      <%= p.text_field :name, class: 'text_field' %>
+    </div>
+    <div class="row">
+      <%= p.label :email, 'Email', class: 'form-actions' %>
+      <%= p.text_field :email, class: 'text_field' %>
+    </div>
+    <div class="row">
+      <%= p.label :body, 'Message', class: 'form-actions' %>
+      <%= p.text_area :body, class: 'text_area' %>
+    </div>
+    <div class="form-actions">
+      <%= p.button 'Send' %>
+    </div>
   <% end %>
-<% end %>
 </div>
