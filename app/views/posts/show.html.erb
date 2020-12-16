@@ -1,7 +1,7 @@
 <div class="page">
   <%= link_to 'Back to Blog Index', posts_path %>
   <div class="blog_article">
-    <h2><%= @post.title %></h2>
+    <h2 class="head_text"><%= @post.title %></h2>
     <p><%= @post.created_at.strftime("%B %d, %Y") %></p>
     <% case @post.catagory %>
       <% when 'guest' %>
