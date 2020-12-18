@@ -1,19 +1,36 @@
 <br>
-  <h1 class="head_text">Articles</h1>
-<div class="article_page">
+<div class="head_text">
+  <h1 class="title is-1 is-family-secondary">Articles</h1>
+</div>
+<br>
+<div class="container">
   <% @articles.each do |a| %>
-    <div class="text_block_two">
-      <img class="article_picture" <%= image_tag (a.picture.url) %>
-      <br>
-      <%= link_to a.title, article_path(a.id), {class: 'title'} %>
-      <h5>Tags:</h5>
-      <div>
-        <% @article_tags.each do |at| %>
-          <% if at.article_id == a.id %>
-            <%= at.tag.tag %>
-          <% end %>
-        <% end %>
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title is-centered">
+          <%= a.title %>
+        </p>
+      </header>
+      <div class="card-content">
+        <div class="media">
+           <div class="media-left">
+             <figure class="image is-128x128">
+               <img <%= image_tag (a.picture.url) %>
+             </figure>
+           </div>
+           <div class="media-content">
+             <p class="content is-medium"><%= truncate(a.body, length: 100, escape: false) %></p>
+           </div>
+         </div>
+        <div class="content">
+          <br>
+          <time><%= a.created_at.strftime("%B %d, %Y") %></time>
+        </div>
       </div>
+      <footer class="card-footer">
+        <%= link_to "Read", article_path(a.id), :class=>"card-footer-item" %>
+      </footer>
     </div>
+    <br>
   <% end %>
 </div>

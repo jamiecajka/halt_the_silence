@@ -1,25 +1,39 @@
 <br>
-<h1 class="head_text">Our Blog</h1>
-<div class="page">
+<div class="head_text">
+  <h1 class="title is-1 is-family-secondary">Our Blog</h1>
+</div>
+<br>
+<div class="container">
   <% @posts.each do |p| %>
-    <div class="text_block_one">
-      <%= link_to p.title, post_path(p.id), {class: 'title'} %>
-      <br>
-      <br>
-        <%= p.created_at.strftime("%B %d, %Y") %>
-      <% case p.catagory %>
-        <% when 'guest' %>
-          <h3 class="guest"> Guest Contributor <%= p.author %> </h3>
-        <% when 'normal' %>
-          <h3 class="us"> <%= p.author %> </h3>
-        <% else %>
-          <h3 class="other"> <%= p.author %> </h3>
-        <% end %>
+    <div class="card">
+      <div class="card-content">
         <% if p.catagory == 'picture' %>
           <img class="article_picture" <%= image_tag (p.picture.url) %>
         <% else %>
-          <%= truncate(p.body, length: 100, escape: false) %>
+          <p class="title"><%= truncate(p.body, length: 100, escape: false) %></p>
         <% end %>
+        <% case p.catagory %>
+          <% when 'guest' %>
+            <p class="subtitle has-text-success"> Guest Contributor <%= p.author %> </p>
+          <% when 'normal' %>
+            <p class="subtitle has-text-warning"> <%= p.author %> </p>
+          <% else %>
+            <p class="subtitle has-text-danger"><%= p.author %> </p>
+          <% end %>
+      </div>
+      <footer class="card-footer">
+        <p class="card-footer-item">
+          <span>
+            <%= link_to 'Read', post_path(p.id) %>
+          </span>
+        </p>
+        <p class="card-footer-item">
+          <span>
+            <%= p.created_at.strftime("%B %d, %Y") %>
+          </span>
+        </p>
+      </footer>
     </div>
+    <br>
   <% end %>
 </div>

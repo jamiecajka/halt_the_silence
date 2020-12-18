@@ -4,7 +4,8 @@
     <title>HaltTheSilence</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag 'custom', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
     <script src="https://kit.fontawesome.com/877c4451bf.js" crossorigin="anonymous"></script>
@@ -20,25 +21,31 @@
         <a href="https://www.instagram.com/haltthesilence/" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://www.youtube.com/channel/UCXhihcdsLpu_JcqYLAQ9MUA" target="_blank"><i class="fab fa-youtube"></i></a>
       </div>
-<!-- Top Navigation Menu -->
-      <div class="topnav">
-        <a href="#home" class="purple"></a>
-        <!-- Navigation links (hidden by default) -->
-        <div id="myLinks">
-          <%= link_to "Home", statements_path %>
-          <%= link_to "About Us", statement_path(1) %>
-          <%= link_to "Articles", articles_path %>
-          <%= link_to "Blog", posts_path %>
-          <%= link_to "Get Involved", new_message_path %>
-          <% if user_signed_in? %>
-            <%= link_to "User Home", user_path(current_user) %>
-          <% end %>
-        </div>
-        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
+      <div class="purple">
       </div>
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="atc">
+
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+              <%= link_to "Home", statements_path, :class=>"navbar-item" %>
+              <%= link_to "About Us", statement_path(1), :class=>"navbar-item" %>
+              <%= link_to "Get Involved", new_message_path, :class=>"navbar-item" %>
+              <%= link_to "Articles", articles_path, :class=>"navbar-item" %>
+              <%= link_to "Blog", posts_path, :class=>"navbar-item" %>
+              <% if user_signed_in? %>
+                <%= link_to "User Home", user_path(current_user), :class=>"navbar-item" %>
+              <% end %>
+
+          </div>
+        </div>
+      </nav>
     </header>
     <%= yield %>
   </body>
@@ -57,12 +64,29 @@
 </html>
 
 <script type="text/javascript">
-  function myFunction() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
+  document.addEventListener('DOMContentLoaded', () => {
+
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
   }
-}
+
+});
 </script>
