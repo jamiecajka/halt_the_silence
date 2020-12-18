@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Open+Sans&display=swap');
+
+$scheme-main:#572561;
+$navbar-item-color:#DCDFE5;
+$navbar-dropdown-background-color: transparent;
+$card-background-color: #F7F7F7;
+$card-shadow: 0 0.5em 1em -0.125em #572561, 0 0px 0 1px #572561;
+$body-family: 'Open Sans', sans-serif;
+$card-color: #363A3E;
+$family-secondary: 'Josefin Sans', sans-serif;
+$warning: #572561; /* purple */
+$danger: #3c526d; /* blue */
+$success: #d10568; /* pink */
+
+@import "bulma";
