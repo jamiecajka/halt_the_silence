@@ -5,6 +5,10 @@ body {
   color: #363A3E;
 }
 
+.nav_back {
+  background: linear-gradient(to bottom, #3c526d 19%, #d10568 92%);
+}
+
 .a_list {
   list-style-type: none;
 }
@@ -17,6 +21,7 @@ body {
 
 .head_text {
   text-align: center;
+  background-color: #572561;
 }
 
 .lang_button {
@@ -57,10 +62,7 @@ body {
 
 /* Home Page */
 
-iframe {
-  margin-left: 24%;
-  margin-right: 25%;
-}
+
 
 /* User Home */
 

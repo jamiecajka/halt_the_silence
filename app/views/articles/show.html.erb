@@ -1,12 +1,31 @@
-<div class="page">
-  <%= link_to 'Back to Article Index', articles_path %>
-  <h2 class="head_text"><%= @article.title %></h2>
-  <img class="article_picture" <%= image_tag (@article.picture.url) %>
-  <div class="blog_article">
-    <h3>By: <%= @article.author %></h3>
-    <% if @article.url != '' %>
-      <h3>Find this article at <%= @article.url %></h3>
-    <% end %>
+<div class="container">
+  <br>
+  <section class="has-text-centered">
+    <button class="button has-background-white"><%= link_to 'Back to Article Index', articles_path %> </button>
+  </section>
+  <br>
+  <section class="section has-background-warning">
+    <div class="columns">
+      <div class="column">
+        <figure class="image is-5x4">
+          <%= image_tag (@article.picture.url) %>
+        </figure>
+      </div>
+      <div class="column">
+        <br><br><br><br>
+        <h2 class="title has-text-white has-text-centered is-family-secondary is-size-1"><%= @article.title %></h2>
+        <br>
+        <h2 class="subtitle has-text-white">By: <%= @article.created_at %></h2>
+        <h2 class="subtitle has-text-white">By: <%= @article.author %></h2>
+        <% if @article.url != '' %>
+          <h2 class="subtitle has-text-white">Find this article at: <%= link_to @article.url %></h2>
+        <% end %>
+        <br>
+      </div>
+    </div>
+  </section>
+  <section>
+    <br>
     <p><%= simple_format @article.body %></p>
     <div>
       <% @article_tags.each do |at| %>
@@ -15,6 +34,8 @@
         <% end %>
       <% end %>
     </div>
+  </section>
+</div>
     <% if user_signed_in? %>
       <% if current_user.admin? %>
         <%= link_to edit_article_path do  %>

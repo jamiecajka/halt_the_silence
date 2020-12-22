@@ -9,7 +9,7 @@ class StatementsController < ApplicationController
   end
 
   def show
-    @statement = Statement.all
+    @statements = Statement.all
   end
 
   private

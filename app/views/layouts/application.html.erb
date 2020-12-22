@@ -13,19 +13,12 @@
 
   <body>
     <header>
-      <%= image_tag 'halt the silence.jpg', {class: 'header-picture'} %>
-      <div class="blue">
-        <a href="https://haltthesilence.tumblr.com/" target="_blank"><i class="fab fa-tumblr"></i></a>
-        <a href="https://twitter.com/HaltTheSilence" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://vm.tiktok.com/ZMJCvxoXt/" target="_blank"><i class="fab fa-tiktok"></i></a>
-        <a href="https://www.instagram.com/haltthesilence/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.youtube.com/channel/UCXhihcdsLpu_JcqYLAQ9MUA" target="_blank"><i class="fab fa-youtube"></i></a>
-      </div>
-      <div class="purple">
-      </div>
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="atc">
-
+      <div class="nav_back">
+      <nav class="navbar has-background-light" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+         <a class="navbar-item is-size-3 is-family-secondary" href="https://bulma.io">
+            HaltTheSilence
+         </a>
           <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -33,34 +26,44 @@
           </a>
         </div>
         <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-              <%= link_to "Home", statements_path, :class=>"navbar-item" %>
-              <%= link_to "About Us", statement_path(1), :class=>"navbar-item" %>
-              <%= link_to "Get Involved", new_message_path, :class=>"navbar-item" %>
-              <%= link_to "Articles", articles_path, :class=>"navbar-item" %>
-              <%= link_to "Blog", posts_path, :class=>"navbar-item" %>
-              <% if user_signed_in? %>
-                <%= link_to "User Home", user_path(current_user), :class=>"navbar-item" %>
-              <% end %>
-
+          <div class="navbar-end">
+            <%= link_to "Home", statements_path, :class=>"navbar-item" %>
+            <%= link_to "About Us", statement_path(1), :class=>"navbar-item" %>
+            <%= link_to "Get Involved", new_message_path, :class=>"navbar-item" %>
+            <%= link_to "Articles", articles_path, :class=>"navbar-item" %>
+            <%= link_to "Blog", posts_path, :class=>"navbar-item" %>
+            <% if user_signed_in? %>
+              <%= link_to "User Home", user_path(current_user), :class=>"navbar-item" %>
+            <% end %>
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                Social Media
+              </a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item" href="https://haltthesilence.tumblr.com/" target="_blank">
+                  <i class="fab fa-tumblr"></i>
+                </a>
+                <a class="navbar-item" href="https://twitter.com/HaltTheSilence" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a class="navbar-item" href="https://vm.tiktok.com/ZMJCvxoXt/" target="_blank">
+                  <i class="fab fa-tiktok"></i>
+                </a>
+                <a class="navbar-item" href="https://www.instagram.com/haltthesilence/" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a class="navbar-item" href="https://www.youtube.com/channel/UCXhihcdsLpu_JcqYLAQ9MUA" target="_blank">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
+      </div>
     </header>
     <%= yield %>
   </body>
-  <footer>
-    <% if user_signed_in? %>
-      <%= link_to destroy_user_session_path, {method: :delete} do %>
-        <img src="https://img.icons8.com/color/48/000000/lgbt-flag.png" class="icon"/>
-      <% end %>
-    <% else %>
-      <%= link_to new_user_session_path do %>
-        <img src="https://img.icons8.com/color/48/000000/lgbt-flag.png" class="icon"/>
-      <% end %>
-      <% end %>
-    <a href="https://icons8.com/icon/32414/lgbt-flag" class="credit">LGBT Flag icon by Icons8</a>
-  </footer>
 </html>
 
 <script type="text/javascript">
