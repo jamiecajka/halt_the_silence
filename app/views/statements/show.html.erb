@@ -1,37 +1,90 @@
-<br>
-<div class="page">
-  <button onclick="englishFunction()" class="lang_button">View Page in English</button>
-  <button onclick="spanishFunction()" class="lang_button">Ver Página en Español</button>
-  <div style="display: block;" id="english">
-    <div class="text_block_one">
-      <div class="text_block">
-        <% @statement.each do |t| %>
-          <% if t.language == 'english' && t.ordinal == 2 %>
-            <h2 class="head_text"><%= t.header %></h2>
-            <%= t.body %>
-            <br>
-          <% end %>
-        <% end %>
+<section class="has-text-centered">
+  <br>
+  <div class="dropdown is-hoverable">
+    <div class="dropdown-trigger">
+      <button class="button has-background-white" aria-haspopup="true" aria-controls="dropdown-menu">
+        <span>Language</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+      <div class="dropdown-content">
+        <a onclick="englishFunction()" class="dropdown-item has-text-white">
+          English
+        </a>
+        <a onclick="spanishFunction()" class="dropdown-item has-text-white">
+          Spanish
+        </a>
       </div>
     </div>
+    <br>
   </div>
-  <div style="display: none;" id="spanish">
-    <div class="text_block_one">
-      <div class="text_block">
-        <% @statement.each do |t| %>
-          <% if t.language == 'spanish' && t.ordinal == 2 %>
-            <h2><%= t.header %></h2>
-            <%= t.body %>
-            <br>
-          <% end %>
-        <% end %>
+</section>
+
+<div style="display: block;" id="english">
+  <section class="section">
+    <div class="container">
+      <h1 class="title"><%= @statements.find(9).body %></h1>
+    </div>
+  </section>
+  <section class="section has-background-warning">
+    <div class="columns">
+      <div class="column is-vcentered">
+        <figure class="image is-16by9">
+          <%= image_tag ('bidean.png') %>
+        </figure>
+      </div>
+      <div class="column">
+        <h2 class="title has-text-white has-text-centered"><%= @statements.find(10).header %></h2>
+        <h2 class="subtitle has-text-white is-size-5"><%= simple_format @statements.find(10).body %></h2>
       </div>
     </div>
-  </div>
-  <h4>View our Privacy Policy <%= link_to "Here", policies_path %></h4>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h2 class="title has-text-centered"><%= @statements.find(16).header %></h2>
+      <h2 class="subtitle"><%= @statements.find(16).body %></h2>
+    </div>
+  </section>
 </div>
-<br>
-<br>
+
+<div style="display: none;" id="spanish">
+  <section class="section">
+    <div class="container">
+      <h1 class="title"><%= @statements.find(25).body %></h1>
+    </div>
+  </section>
+  <section class="section has-background-warning">
+    <div class="columns">
+      <div class="column">
+        <figure class="image is-3by4">
+          <%= image_tag ('bidean.png') %>
+        </figure>
+      </div>
+      <div class="column">
+        <% @statements.each do |t| %>
+          <% if t.id.between?(26, 31) %>
+            <h2 class="title has-text-white has-text-centered"><%= t.header %></h2>
+            <h2 class="subtitle has-text-white"><%= t.body %></h2>
+            <br>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h2 class="title has-text-centered"><%= @statements.find(32).header %></h2>
+      <h2 class="subtitle"><%= @statements.find(32).body %></h2>
+    </div>
+  </section>
+</div>
+
+<section class="section has-background-warning">
+  <h2 class="subtitle has-text-white">View our Privacy Policy <%= link_to "Here", policies_path %></h2>
+</section>
 
 <script type="text/javascript">
   function spanishFunction() {

@@ -55,37 +55,12 @@ Statement.create(
 
   Statement.create(
   header: "Mission Statement",
-  body: "HaltTheSilence is committed to the following:",
-  language: 'english',
-  ordinal: 2
-)
-
-Statement.create(
-  body: "1. Providing a safe place for fans to discuss queer issues in a way that is healthy, productive and smart.",
-  language: 'english',
-  ordinal: 2
-)
-
-Statement.create(
-  body: "2. Creating and promoting activists and campaigns that discuss queer issues in media.",
-  language: 'english',
-  ordinal: 2
-)
-
-Statement.create(
-  body: "3. Opening up channels to discuss queer issues with actors, directors, producers, etc., in all forms of media.",
-  language: 'english',
-  ordinal: 2
-)
-
-Statement.create(
-  body: "4. Promoting the works of creators and other media organizations that are getting it right, and telling the stories we want to see more of.",
-  language: 'english',
-  ordinal: 2
-)
-
-Statement.create(
-  body: "5. Maintaining integrity and transparency — we are fans just like you, and we never want to lose sight of that.",
+  body: "HaltTheSilence is committed to the following:
+1. Providing a safe place for fans to discuss queer issues in a way that is healthy, productive and smart.
+2. Creating and promoting activists and campaigns that discuss queer issues in media.
+3. Opening up channels to discuss queer issues with actors, directors, producers, etc., in all forms of media.
+4. Promoting the works of creators and other media organizations that are getting it right, and telling the stories we want to see more of.
+5. Maintaining integrity and transparency — we are fans just like you, and we never want to lose sight of that.",
   language: 'english',
   ordinal: 2
 )
@@ -153,37 +128,12 @@ Statement.create(
 
 Statement.create(
   header: 'Declaración de intenciones',
-  body: 'HaltTheSilence se compromete a lo siguiente:',
-  language: 'spanish',
-  ordinal: 2
-)
-
-Statement.create(
-  body: '1. Proveer un espacio seguro para que los fans puedan discutir temas queer de forma sana, productiva e inteligente.',
-  language: 'spanish',
-  ordinal: 2
-)
-
-Statement.create(
-  body: '2. Crear y promover activistas y campañas que debatan temas queer en los medios de comunicación.',
-  language: 'spanish',
-  ordinal: 2
-)
-
-Statement.create(
-  body: '3. Abrir canales de discusión de temas queer con actores, directores, productores, etc., en todo tipo de medios.',
-  language: 'spanish',
-  ordinal: 2
-)
-
-Statement.create(
-  body: '4. Promover el trabajo de creadores y otras organizaciones que lo están captando bien, y contando esas historias de las que necesitamos ver más.',
-  language: 'spanish',
-  ordinal: 2
-)
-
-Statement.create(
-  body: '5. Mantener transparencia e integridad — somos fans justo como tú, y nunca queremos perder eso de vista',
+  body: 'HaltTheSilence se compromete a lo siguiente:
+  1. Proveer un espacio seguro para que los fans puedan discutir temas queer de forma sana, productiva e inteligente.
+  2. Crear y promover activistas y campañas que debatan temas queer en los medios de comunicación.
+  3. Abrir canales de discusión de temas queer con actores, directores, productores, etc., en todo tipo de medios.
+  4. Promover el trabajo de creadores y otras organizaciones que lo están captando bien, y contando esas historias de las que necesitamos ver más.
+  5. Mantener transparencia e integridad — somos fans justo como tú, y nunca queremos perder eso de vista',
   language: 'spanish',
   ordinal: 2
 )
