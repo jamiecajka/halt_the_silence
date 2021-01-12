@@ -11,6 +11,7 @@
       </div>
     <% end %>
     <h1 class="form_header">New Post</h1>
+    <h2>For pictures, use catagory 'Picture'. For Videos, use catagory 'Video' </h2>
     <%= form_for @post do |p| %>
       <div class="row">
         <%= p.label :title, 'Title', class: 'form-actions' %>
@@ -20,13 +21,14 @@
         <%= p.label :author, 'Author', class: 'form-actions' %>
         <%= p.text_field :author, class: 'text_field' %>
         <%= p.label :catagory, 'Catagory', class: 'form-actions' %>
-        <%= p.select :catagory, options_for_select([['Normal', 'normal'], ['Guest', 'guest'], ['Other', 'other'], ['Picture', 'picture']]) %>
+        <%= p.select :catagory, options_for_select([['Normal', 'normal'], ['Guest', 'guest'], ['Video', 'other'], ['Picture', 'picture']]) %>
       </div>
       <h3>Only upload picture if picture catagory is selected</h3>
       <div class="row">
         <%= p.label :picture, 'Picture', class: 'form-actions' %>
         <%= p.file_field :picture, class: 'text_field' %>
       </div>
+      <h2>If you are posting a video, enter the embeded url in the body</h2>
       <div class="row">
         <%= p.label :body, 'Body', class: 'form-actions' %>
         <%= p.text_area :body, class: 'text_area' %>
