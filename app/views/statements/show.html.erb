@@ -32,13 +32,14 @@
   <section class="section has-background-warning">
     <div class="columns">
       <div class="column is-vcentered">
-        <figure class="image is-16by9">
+        <figure class="image is-4by5">
           <%= image_tag ('bidean.png') %>
         </figure>
       </div>
       <div class="column">
+        <br><br><br>
         <h2 class="title has-text-white has-text-centered"><%= @statements.find(10).header %></h2>
-        <h2 class="subtitle has-text-white is-size-5"><%= simple_format @statements.find(10).body %></h2>
+        <h2 class="subtitle has-text-white is-size-5 is-align-content-center	"><%= simple_format @statements.find(10).body %></h2>
       </div>
     </div>
   </section>

@@ -1,12 +1,15 @@
-<br>
+<div class="container"><br>
   <h1 class="title is-1 is-family-secondary has-text-centered">Our Blog</h1>
-<br>
-<div class="container">
+  <br>
   <% @posts.each do |p| %>
     <div class="card">
       <div class="card-content">
         <% if p.catagory == 'picture' %>
-          <img class="article_picture" <%= image_tag (p.picture.url) %>
+          <img class="blog_picture" <%= image_tag (p.picture.url) %>
+        <% elsif p.catagory == 'other' %>
+          <figure class="centered">
+            <iframe class="has-ratio" width="560" height="315" src=<%= p.body %> frameborder="0" allowfullscreen></iframe>
+          </figure>
         <% else %>
           <p class="title"><%= truncate(p.body, length: 100, escape: false) %></p>
         <% end %>
@@ -14,9 +17,9 @@
           <% when 'guest' %>
             <p class="subtitle has-text-success"> Guest Contributor <%= p.author %> </p>
           <% when 'normal' %>
-            <p class="subtitle has-text-warning"> <%= p.author %> </p>
+            <p class="subtitle has-text-warning">By <%= p.author %> </p>
           <% else %>
-            <p class="subtitle has-text-danger"><%= p.author %> </p>
+            <p class="subtitle has-text-danger">By <%= p.author %> </p>
           <% end %>
       </div>
       <footer class="card-footer">

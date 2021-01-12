@@ -1,29 +1,43 @@
-<div class="page">
-  <%= link_to 'Back to Blog Index', posts_path %>
-  <div class="blog_article">
-    <h2 class="head_text"><%= @post.title %></h2>
+<div class="container">
+  <br>
+  <section class="has-text-centered">
+    <button class="button has-background-white"><%= link_to 'Back to Blog Index', posts_path %> </button>
+  </section>
+  <br>
+  <section class="has-text-centered">
+    <h2 class="title is-family-secondary"><%= @post.title %></h2>
     <p><%= @post.created_at.strftime("%B %d, %Y") %></p>
     <% case @post.catagory %>
       <% when 'guest' %>
         <h3 class="guest"> Guest Contributor <%= @post.author %> </h3>
-      <% when 'other' %>
-        <h3 class="other">By <%= @post.author %> </h3>
-      <% else %>
+      <% when 'normal' %>
         <h3 class="us">By <%= @post.author %> </h3>
+      <% else %>
+        <h3 class="other">By <%= @post.author %> </h3>
     <% end %>
+    <br>
+  </section>
+  <section>
     <% if @post.catagory == 'picture' %>
       <img class="blog_picture" <%= image_tag (@post.picture.url) %>
+    <% elsif @post.catagory == 'other' %>
+      <figure class="centered">
+        <iframe class="has-ratio" width="560" height="315" src=<%= @post.body %> frameborder="0" allowfullscreen></iframe>
+      </figure>
     <% else %>
       <p><%= simple_format @post.body %></p>
     <% end %>
-    <div>
-      <h3>Tags:</h3>
+  </section>
+  <section>
+    <div class="column">
+      <h3>Tags: 
       <% @post_tags.each do |pt| %>
         <% if pt.post_id == @post.id %>
-          <p><%= pt.tag.tag %></p>
+          <%= pt.tag.tag %></h3>
         <% end %>
       <% end %>
     </div>
+  </section>
     <% if current_user.admin? %>
       <%= link_to edit_post_path do  %>
         <i class="far fa-edit fa-2x"></i>
@@ -32,5 +46,4 @@
         <i class="far fa-trash-alt fa-2x"></i>
       <% end %>
     <% end %>
-  </div>
 </div>

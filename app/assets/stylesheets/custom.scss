@@ -12,5 +12,8 @@ $danger: #3c526d; /* blue */
 $success: #d10568; /* pink */
 $white: #F7F7F7;
 $light: transparent;
+.is-horizontal-center {
+  justify-content: center;
+}
 
 @import "bulma";
