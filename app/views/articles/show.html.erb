@@ -15,7 +15,7 @@
         <br><br><br><br>
         <h2 class="title has-text-white has-text-centered is-family-secondary is-size-1"><%= @article.title %></h2>
         <br>
-        <h2 class="subtitle has-text-white">By: <%= @article.created_at %></h2>
+        <h2 class="subtitle has-text-white">By: <%= @article.created_at.strftime("%B %d, %Y") %></h2>
         <h2 class="subtitle has-text-white">By: <%= @article.author %></h2>
         <% if @article.url != '' %>
           <h2 class="subtitle has-text-white">Find this article at: <%= link_to @article.url %></h2>
