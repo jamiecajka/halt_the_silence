@@ -30,7 +30,7 @@
   </section>
   <section>
     <div class="column">
-      <h3>Tags: 
+      <h3>Tags:
       <% @post_tags.each do |pt| %>
         <% if pt.post_id == @post.id %>
           <%= pt.tag.tag %></h3>
@@ -38,6 +38,7 @@
       <% end %>
     </div>
   </section>
+  <% if user_signed_in? %>
     <% if current_user.admin? %>
       <%= link_to edit_post_path do  %>
         <i class="far fa-edit fa-2x"></i>
@@ -46,4 +47,5 @@
         <i class="far fa-trash-alt fa-2x"></i>
       <% end %>
     <% end %>
+  <% end %>
 </div>
